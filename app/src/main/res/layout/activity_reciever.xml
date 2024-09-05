@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reciever"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".reciever"
+    android:background="@color/bg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reciever"
+        android:textSize="65sp"
+        android:textColor="@color/white"
+        android:background="@color/red"
+        android:paddingLeft="15dp"/>
+
+    <EditText
+        android:id="@+id/etreEmail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/left_right_margin"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/roundedcorners"
+        android:layout_marginBottom="15dp"/>
+
+    <EditText
+        android:id="@+id/etreName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/left_right_margin"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:background="@drawable/roundedcorners"
+        android:layout_marginBottom="15dp"/>
+
+    <EditText
+        android:id="@+id/etreAddress"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/left_right_margin"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:background="@drawable/roundedcorners"
+        android:hint="@string/address"
+        android:inputType="text"
+        android:layout_marginBottom="15dp"/>
+
+    <EditText
+        android:id="@+id/etreContact"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/left_right_margin"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:hint="@string/contact"
+        android:inputType="number"
+        android:background="@drawable/roundedcorners"
+        android:layout_marginBottom="15dp"/>
+
+    <EditText
+        android:id="@+id/etreCountry"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/left_right_margin"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:hint="@string/country"
+        android:inputType="text"
+        android:background="@drawable/roundedcorners"
+        android:layout_marginBottom="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:layout_marginStart="@dimen/left_right_margin"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="25dp">
+
+        <Button
+            android:id="@+id/btnreNext"
+            android:backgroundTint="@color/red"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"/>
+    </LinearLayout>
+</LinearLayout>
