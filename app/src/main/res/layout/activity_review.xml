@@ -149,4 +149,13 @@
             android:id="@+id/recContact" />
 
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="330sp"
+        android:layout_marginTop="450sp"
+        android:backgroundTint="@color/red"
+        android:src="@drawable/fab_add" />
 </LinearLayout>

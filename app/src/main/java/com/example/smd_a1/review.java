@@ -1,20 +1,23 @@
 package com.example.smd_a1;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class review extends AppCompatActivity {
 
     // hooks
-    EditText etseName, etseAddress, etseContact, etseCountry,etreName, etreAddress, etreContact, etreCountry;
-    TextView senderName, senderAddress, senderContact, senderCountry,recName, recAddress, recContact, recCountry;
+    EditText etseName, etseAddress, etseContact, etseCountry, etreName, etreAddress, etreContact, etreCountry;
+    TextView senderName, senderAddress, senderContact, senderCountry, recName, recAddress, recContact, recCountry;
+    FloatingActionButton fabAdd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_review);
 
         init();
@@ -36,8 +39,22 @@ public class review extends AppCompatActivity {
         recAddress.setText(receiverAddressData);
         recCountry.setText(receiverCountryData);
         recContact.setText(receiverContactData);
-    }
 
+        fabAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(review.this, sender.class));
+                etreName.setText("");
+                etreAddress.setText("");
+                etreContact.setText("");
+                etreCountry.setText("");
+                etseName.setText("");
+                etseAddress.setText("");
+                etseContact.setText("");
+                etseCountry.setText("");
+            }
+        });
+    }
 
     private void init() {
         etreName = findViewById(R.id.etreName);
@@ -48,13 +65,14 @@ public class review extends AppCompatActivity {
         etseAddress = findViewById(R.id.etseAddress);
         etseContact = findViewById(R.id.etseContact);
         etseCountry = findViewById(R.id.etseCountry);
-        senderName=findViewById(R.id.senderName);
-        senderAddress=findViewById(R.id.senderAddress);
-        senderCountry=findViewById(R.id.senderCountry);
-        senderContact=findViewById(R.id.senderContact);
-        recName=findViewById(R.id.recName);
-        recAddress=findViewById(R.id.recAddress);
-        recCountry=findViewById(R.id.recCountry);
-        recContact=findViewById(R.id.recContact);
+        senderName = findViewById(R.id.senderName);
+        senderAddress = findViewById(R.id.senderAddress);
+        senderCountry = findViewById(R.id.senderCountry);
+        senderContact = findViewById(R.id.senderContact);
+        recName = findViewById(R.id.recName);
+        recAddress = findViewById(R.id.recAddress);
+        recCountry = findViewById(R.id.recCountry);
+        recContact = findViewById(R.id.recContact);
+        fabAdd = findViewById(R.id.fabAdd);
     }
 }
